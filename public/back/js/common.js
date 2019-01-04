@@ -21,3 +21,45 @@ $(document).ajaxStart(function () {
 $(document).ajaxStop(function () {
     NProgress.done();
 })
+
+// 入口函数 等待当前的dom结构 加载完成之后执行
+$(function () {
+    // 公共功能
+    // 1. 左侧二级菜单切换
+    $('.lt_aside .category').click(function (){
+        $(this).next().stop().slideToggle();
+    })
+
+
+
+    // 2. 左边侧边栏切换
+    $('.icon_menu').click(function () {
+        $('.lt_aside').toggleClass('hidemenu');
+        $('.lt_main').toggleClass('hidemenu');
+        $('.lt_topbar').toggleClass('hidemenu');
+    })
+
+
+
+
+    // 3. 退出功能
+    // 显示模态框
+    $('.icon_logout').click(function () {
+        // 让模态框显示
+        $('#logoutModal').modal('show');
+    })
+
+    $('#logoutBtn').click (function () {
+        $.ajax({
+            data: 'get',
+            url: "/employee/employeeLogout",
+            dataType: 'json',
+            success: function (info ) {
+                // console.log('退出登录');
+                if (info.success) {
+                    location.href = 'login.html';
+                }
+            }
+        })
+    })
+})
