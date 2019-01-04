@@ -121,7 +121,7 @@ ul {
     padding-top: 50px;
     padding-left: 180px;
     height: 2000px;
-    background-color: #fff;
+    background-color: #6AB0B8;
     /* background-color: #ff6f61; */
     transition: all 1s;
 }
@@ -163,6 +163,6 @@ ul {
 .echarts_left,
 .echarts_right {
     height: 400px;
-    width: 48%;
+    width: 49%;
     background-color: #3c8d;
 }
