@@ -100,8 +100,11 @@ ul {
 
 
 .lt_aside .nav .child {
-    padding-left: 25px;
     display: none;
+}
+
+.lt_aside .nav .child a {
+    padding-left: 60px;
 }
 
 
@@ -118,7 +121,8 @@ ul {
     padding-top: 50px;
     padding-left: 180px;
     height: 2000px;
-    background-color: #ff6f61;
+    background-color: #fff;
+    /* background-color: #ff6f61; */
     transition: all 1s;
 }
 .lt_main.hidemenu {
@@ -131,9 +135,10 @@ ul {
     top: 0;
     height: 50px;
     width: 100%;
-    background-color: #3c8d;
+    background-color: orange;
     padding-left: 180px;
     transition: all 1s;
+    z-index: 998;
 }
 .lt_topbar.hidemenu {
     padding-left: 0px;
@@ -146,4 +151,18 @@ ul {
     text-align: center;
     color: #fff;
     font-size: 20px;
+}
+
+
+
+
+
+
+
+
+.echarts_left,
+.echarts_right {
+    height: 400px;
+    width: 48%;
+    background-color: #3c8d;
 }
